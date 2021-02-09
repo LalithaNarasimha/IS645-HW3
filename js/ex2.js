@@ -12,9 +12,10 @@ The following day is: FollowingDay
 
 //Enter the day of the week
 let day = ""
+let days = ['sun','mon','tue','wed','thu','fri','sat'];
 while(true){
     day = prompt("Enter a valid 3 letter abbreviation of the day");
-    if(day.length == 3) {
+    if(day.length == 3 && days.includes(day)) {
         console.log(`You entered: ${day}`)
         break;
     }
@@ -38,5 +39,8 @@ switch(day){
     case 'sat':
         console.log("The Following day is :sun");
         break;
+    case 'sun':
+        console.log("The Following day is :mon");
+        break;    
 }    
 
